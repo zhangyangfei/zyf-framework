@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /busilog
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//localhost:1521/orcl
+    username: test
+    password: test
+#业务操作日志配置信息
+busilog:
+  #日志保留时长（月）
+  keeplong: 6
+  #清理日志定时任务
+  batch:
+    delete-cron: 0 0 4 * * ?
